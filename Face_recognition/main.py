@@ -6,7 +6,7 @@ import face_recognition
 webcam = cv2.VideoCapture("http://192.168.0.103:8080/video")
 
 #Adding image path
-pathFolder = 'H:\OpenCV\OpenCv Practice\Face_recognition\images'
+pathFolder = 'Face_recognition\images'
 images = []
 clsName = []
 myList = os.listdir(pathFolder)
@@ -54,4 +54,5 @@ while True:
     if cv2.waitKey(25) & 0xFF == 27:
         break
 webcam.release()
+
 cv2.destroyAllWindows()
