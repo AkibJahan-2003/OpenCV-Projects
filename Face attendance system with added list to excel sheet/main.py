@@ -34,7 +34,7 @@ def markAttenance(name):
             entry = line.split(',')
             nameList.append(entry[0])
         if name not in nameList:
-            now = datetime.now()
+            now = datetime.datetime.now()
             dtString = now.strftime("%H:%M:%S")
             f.writelines(f'\n{name},{dtString}')
 
@@ -76,3 +76,4 @@ while True:
 
 cam.release()
 cv2.destroyAllWindows()
+
